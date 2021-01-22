@@ -17,4 +17,11 @@ it 'returns fizz when passed any multiple of 5' do
       end
     end
 end
+it "return number when not a multple of 3 or 5" do
+  (1..100).to_a.each do |num|
+    if num.to_f % 5 != 0 && num.to_f % 3 != 0
+      expect(fizzbuzz(num)).to eq num
+    end
+  end
+end  
 end
